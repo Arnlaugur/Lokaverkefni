@@ -19,5 +19,7 @@ namespace TopTrump_Klasasafn
         private int Agility { get; set; }
         private int Intrigue { get; set; }
         private int Stewardship { get; set; }
+
+
     }
 }
