@@ -11,6 +11,7 @@ namespace TopTrump_Klasasafn
         private string Name { get; set; }
         private string id { get; set; }
         private string Age { get; set; }
+        private string CardType { get; set; }
         private int Wit { get; set; }
         private int Strength { get; set; }
         private int Leadership { get; set; }
@@ -19,21 +20,29 @@ namespace TopTrump_Klasasafn
         private int Agility { get; set; }
         private int Intrigue { get; set; }
         private int Stewardship { get; set; }
-        public GoT(List<string> card) //Settur eiginleikana á réttan stað
+        public GoT(string[] CardDeck) //Settur eiginleikana á réttan stað
         {
-            Name = card[1];
-            id = card[2];
-            Age = card[3];
-            Wit = Convert.ToInt32(card[4]);
-            Strength = Convert.ToInt32(card[5]);
-            Leadership = Convert.ToInt32(card[6]);
-            Piety = Convert.ToInt32(card[7]);
-            Prestige = Convert.ToInt32(card[8]);
-            Agility = Convert.ToInt32(card[9]);
-            Intrigue = Convert.ToInt32(card[10]);
-            Stewardship = Convert.ToInt32(card[11]);
+            foreach (string cards in CardDeck)
+            {
+                string[] card = cards.Split(':');
+                Name = card[1];
+                id = card[2];
+                Age = card[3];
+                CardType = card[4];
+                Wit = Convert.ToInt32(card[5]);
+                Strength = Convert.ToInt32(card[6]);
+                Leadership = Convert.ToInt32(card[7]);
+                Piety = Convert.ToInt32(card[8]);
+                Prestige = Convert.ToInt32(card[9]);
+                Agility = Convert.ToInt32(card[10]);
+                Intrigue = Convert.ToInt32(card[11]);
+                Stewardship = Convert.ToInt32(card[12]);
+            }
         }
-        List<List<string>> list = new List<List<string>>();
-        List<string> card1 = new List<string>();
+        public string InitCards()
+        {
+
+        }
+       string[] CardStack = new string[52];
     }
 }
