@@ -10,12 +10,13 @@ namespace TopTrump_Klasasafn
     {
         private string Name { get; set; }
         private int Id { get; set; }
+        private int Height { get; set; }
+        private int Weight { get; set; }
         private int Strength { get; set; }
         private int Agility { get; set; }
         private int Intellect { get; set; }
         private int Stamina { get; set; }
         private int Stealth { get; set; }
-        private int Courage { get; set; }
-        private int 
+        private int Courage { get; set; }       
     }
 }

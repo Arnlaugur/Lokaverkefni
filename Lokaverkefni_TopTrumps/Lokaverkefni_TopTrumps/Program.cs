@@ -10,6 +10,15 @@ namespace Lokaverkefni_TopTrumps
     {
         static void Main(string[] args)
         {
+            int valmynd = 0;
+
+            do
+            {
+                Console.WriteLine("Hvað viltu gera?");
+                Console.WriteLine("1. ");
+                Console.WriteLine("2. ");
+                Console.WriteLine("3. ");
+            } while (true);
         }
     }
 }
