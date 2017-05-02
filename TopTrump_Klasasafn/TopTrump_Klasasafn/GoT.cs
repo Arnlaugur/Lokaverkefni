@@ -41,10 +41,19 @@ namespace TopTrump_Klasasafn
                 i++;
             }
         }
-        public string InitCards()
+        public string[] InitCards()
         {
+            string[] CardStack = new string[52];
+            CardStack[0] = "Tyrion Lannister:1:26:heart:10:3:6:1:7:1:9:9";
+            CardStack[1] = "Jamie Lannister:2:33:heart:7:8:7:6:10:8:3:4";
+            CardStack[2] = "Cersei Lannister:3:33:heart:9:4:3:5:8:6:9:8";
+            CardStack[3] = "Tywin Lannister:4:64:heart:10:6:9:4:10:6:9:8";
+            CardStack[4] = "Gregor Clegane:5:34:heart:2:10:1:3:9:7:1:3";
+            CardStack[5] = "Joffrey Baratheon:6:17:heart:5:6:4:3:7:7:3:2";
+            CardStack[6] = "Sandor Clegane:7:29:heart:7:8:3:2:8:8:5:3";
 
+            return CardStack;
         }
-       string[] CardStack = new string[52];
+       
     }
 }
