@@ -51,7 +51,53 @@ namespace TopTrump_Klasasafn
             CardStack[4] = "Gregor Clegane:5:34:heart:2:10:1:3:9:7:1:3";
             CardStack[5] = "Joffrey Baratheon:6:17:heart:5:6:4:3:7:7:3:2";
             CardStack[6] = "Sandor Clegane:7:29:heart:7:8:3:2:8:8:5:3";
+            CardStack[7] = "Robert Baratheon:8:37:heart:7:7:9:6:9:2:4:5";
+            CardStack[8] = "Stannis Baratheon:9:35:heart:";
+            CardStack[9] = "Renly Baratheon:10:22:heart:";
+            CardStack[10] = "Melisandre:11:396:heart:10:3:4:10:8:3:9:7";
+            CardStack[11] = "Bronn";
+            CardStack[12] = "The High Sparrow";
 
+            CardStack[13] = "Hodor";
+            CardStack[14] = "Eddard Stark:14:";
+            CardStack[15] = "Catelyn Stark:15";
+            CardStack[16] = "Robb Stark";
+            CardStack[17] = "Brandon Stark";
+            CardStack[18] = "Jon Snow";
+            CardStack[19] = "Ygritte";
+            CardStack[20] = "Samwell Tarly";
+            CardStack[21] = "Arya Stark";
+            CardStack[22] = "Sansa Stark";
+            CardStack[23] = "Petyr Baelish";
+            CardStack[24] = "Gilly";
+            CardStack[25] = "Tormund Giantsbane";
+
+            CardStack[26] = "Brienne of Tarth";
+            CardStack[27] = "";
+            CardStack[28] = "";
+            CardStack[29] = "";
+            CardStack[30] = "";
+            CardStack[31] = "";
+            CardStack[32] = "";
+            CardStack[33] = "";
+            CardStack[34] = "";
+            CardStack[35] = "";
+            CardStack[36] = "";
+            CardStack[37] = "";
+            CardStack[38] = "";
+            CardStack[39] = "";
+            CardStack[40] = "";
+            CardStack[41] = "";
+            CardStack[42] = "";
+            CardStack[43] = "";
+            CardStack[44] = "";
+            CardStack[45] = "";
+            CardStack[46] = "";
+            CardStack[47] = "";
+            CardStack[48] = "";
+            CardStack[49] = "";
+            CardStack[50] = "";
+            CardStack[51] = "";
             return CardStack;
         }
        
