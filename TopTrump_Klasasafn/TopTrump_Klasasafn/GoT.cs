@@ -52,7 +52,7 @@ namespace TopTrump_Klasasafn
             CardStack[5] = "Joffrey Baratheon:6:17:heart:5:6:4:3:7:7:3:2";
             CardStack[6] = "Sandor Clegane:7:29:heart:7:8:3:2:8:8:5:3";
             CardStack[7] = "Robert Baratheon:8:37:heart:7:7:9:6:9:2:4:5";
-            CardStack[8] = "Stannis Baratheon:9:35:heart:";
+            CardStack[8] = "Margaery Tyrell";	
             CardStack[9] = "Renly Baratheon:10:22:heart:";
             CardStack[10] = "Melisandre:11:396:heart:10:3:4:10:8:3:9:7";
             CardStack[11] = "Bronn";
@@ -73,33 +73,84 @@ namespace TopTrump_Klasasafn
             CardStack[25] = "Tormund Giantsbane";
 
             CardStack[26] = "Brienne of Tarth";
-            CardStack[27] = "";
-            CardStack[28] = "";
-            CardStack[29] = "";
-            CardStack[30] = "";
-            CardStack[31] = "";
-            CardStack[32] = "";
-            CardStack[33] = "";
-            CardStack[34] = "";
-            CardStack[35] = "";
-            CardStack[36] = "";
-            CardStack[37] = "";
-            CardStack[38] = "";
-            CardStack[39] = "";
-            CardStack[40] = "";
-            CardStack[41] = "";
-            CardStack[42] = "";
-            CardStack[43] = "";
-            CardStack[44] = "";
-            CardStack[45] = "";
-            CardStack[46] = "";
-            CardStack[47] = "";
-            CardStack[48] = "";
-            CardStack[49] = "";
-            CardStack[50] = "";
-            CardStack[51] = "";
+            CardStack[27] = "Daenerys Targaryen";
+            CardStack[28] = "Viserys Targaryen";
+            CardStack[29] = "Varys";
+            CardStack[30] = "Jeor Mormont";
+            CardStack[31] = "Jaqen H'ghar";
+            CardStack[32] = "Daario Naharis";
+            CardStack[33] = "Missandei";
+            CardStack[34] = "Ellaria Sand";
+            CardStack[35] = "Loras Tyrell";
+            CardStack[36] = "Syrio Forel";
+            CardStack[37] = "Khal Drogo";
+            CardStack[38] = "The Waif";
+
+            CardStack[39] = "Podrick Payne";
+            CardStack[40] = "Yara Greyjoy";
+            CardStack[41] = "Theon Greyjoy";
+            CardStack[42] = "Ramsay Bolton";
+            CardStack[43] = "Roose Bolton";
+            CardStack[44] = "Stannis Baratheon:9:35:heart:";
+            CardStack[45] = "Maester Aemon";
+            CardStack[46] = "Janos Slynt";
+            CardStack[47] = "Alliser Thorne";
+            CardStack[48] = "Mance Rayder";
+            CardStack[49] = "Bowen Marsh";
+            CardStack[50] = "Varamyr Sixskins";
+            CardStack[51] = "Eddison Tollett";
             return CardStack;
         }
+       public void DisplayCard(int cardNum)
+       {
+           Console.WriteLine("Name: " + Name[cardNum]);
+           Console.WriteLine("Age: " + Age[cardNum]);
+           Console.WriteLine("CardType: " + CardType[cardNum]);
+           Console.WriteLine("Wit: " + Wit[cardNum]);
+           Console.WriteLine("Strength: " + Strength[cardNum]);
+           Console.WriteLine("Leadership: " + Leadership[cardNum]);
+           Console.WriteLine("Piety: " + Piety[cardNum]);
+           Console.WriteLine("Prestige: " + Prestige[cardNum]);
+           Console.WriteLine("Agility: " + Agility[cardNum]);
+           Console.WriteLine("Intrigue: " + Intrigue[cardNum]);
+           Console.WriteLine("Stewardship: " + Stewardship[cardNum]);
+       }
        
+        public int Compete(int cardNum, int competitionCategory)
+       {
+           if (competitionCategory == 1)
+           {
+               
+           }
+           else if (competitionCategory == 2)
+           {
+               
+           }
+           else if (competitionCategory == 3)
+           {
+               
+           }
+           else if (competitionCategory == 4)
+           {
+
+           }
+           else if (competitionCategory == 5)
+	       {
+		 
+	       }
+           else if (competitionCategory == 6)
+	       {
+		 
+	       }
+           else if (competitionCategory == 7)
+	       {
+		 
+	       }
+           else if (competitionCategory == 8)
+	       {
+		 
+	       }
+           
+       }
     }
 }
