@@ -115,5 +115,42 @@ namespace TopTrump_Klasasafn
            Console.WriteLine("Intrigue: " + Intrigue[cardNum]);
            Console.WriteLine("Stewardship: " + Stewardship[cardNum]);
        }
+       
+        public int Compete(int cardNum, int competitionCategory)
+       {
+           if (competitionCategory == 1)
+           {
+               
+           }
+           else if (competitionCategory == 2)
+           {
+               
+           }
+           else if (competitionCategory == 3)
+           {
+               
+           }
+           else if (competitionCategory == 4)
+           {
+
+           }
+           else if (competitionCategory == 5)
+	       {
+		 
+	       }
+           else if (competitionCategory == 6)
+	       {
+		 
+	       }
+           else if (competitionCategory == 7)
+	       {
+		 
+	       }
+           else if (competitionCategory == 8)
+	       {
+		 
+	       }
+           
+       }
     }
 }
