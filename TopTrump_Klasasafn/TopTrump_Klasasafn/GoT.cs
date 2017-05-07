@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TopTrump_Klasasafn
 {
-    class GoT
+    class GoT:Class1
     {
         private string[] Name { get; set; }
         private string[] id { get; set; }
