@@ -109,26 +109,76 @@ namespace TopTrump_Klasasafn
            Console.WriteLine("Magic: " + Magic[cardNum]);
            Console.WriteLine("Height: " + Height[cardNum]);
        }
+<<<<<<< HEAD
        
        /* public int Compete(int cardNum, int competitionCategory)
+=======
+
+       public int Compete(int cardNum, int cardNum2, int competitionCategory)
+>>>>>>> 3030f0f2472369dfa890f6ca5593b0905baee0a7
        {
            if (competitionCategory == 1)
            {
-               
+               if (Resistance[cardNum] > Resistance[cardNum2])
+               {
+                   return 1;
+               }
+               else if (Resistance[cardNum] < Resistance[cardNum2])
+               {
+                   return 2;
+               }
+               else
+               {
+                   return 3;
+               }
            }
            else if (competitionCategory == 2)
            {
-               
+               if (Resilience[cardNum] > Resilience[cardNum2])
+               {
+                   return 1;
+               }
+               else if (Resilience[cardNum] < Resilience[cardNum2])
+               {
+                   return 2;
+               }
+               else
+               {
+                   return 3;
+               }
            }
            else if (competitionCategory == 3)
            {
-               
+               if (Ferocity[cardNum] > Ferocity[cardNum2])
+               {
+                   return 1;
+               }
+               else if (Ferocity[cardNum] < Ferocity[cardNum2])
+               {
+                   return 2;
+               }
+               else
+               {
+                   return 3;
+               }
            }
            else if (competitionCategory == 4)
            {
-
+               if (Magic[cardNum] > Magic[cardNum2])
+               {
+                   return 1;
+               }
+               else if (Magic[cardNum] < Magic[cardNum2])
+               {
+                   return 2;
+               }
+               else
+               {
+                   return 3;
+               }
            }
            else if (competitionCategory == 5)
+<<<<<<< HEAD
 	       {
 		 
 	       }
@@ -145,5 +195,26 @@ namespace TopTrump_Klasasafn
 		 
 	       }           
        } */
+=======
+           {
+               if (Height[cardNum] > Height[cardNum2])
+               {
+                   return 1;
+               }
+               else if (Height[cardNum] < Height[cardNum2])
+               {
+                   return 2;
+               }
+               else
+               {
+                   return 3;
+               }
+           }
+           else
+           {
+               return 4;
+           }          
+       }
+>>>>>>> 3030f0f2472369dfa890f6ca5593b0905baee0a7
     }
 }
