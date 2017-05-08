@@ -110,7 +110,7 @@ namespace TopTrump_Klasasafn
            Console.WriteLine("Height: " + Height[cardNum]);
        }
        
-        public int Compete(int cardNum, int competitionCategory)
+       /* public int Compete(int cardNum, int competitionCategory)
        {
            if (competitionCategory == 1)
            {
@@ -144,6 +144,6 @@ namespace TopTrump_Klasasafn
 	       {
 		 
 	       }           
-       }
+       } */
     }
 }
