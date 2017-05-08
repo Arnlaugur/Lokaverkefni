@@ -8,6 +8,7 @@ namespace TopTrump_Klasasafn
 {
     class GoT:Class1
     {
+        string[] CardStack = new string[52];
         private string[] Name { get; set; }
         private string[] id { get; set; }
         private string[] Age { get; set; }
@@ -20,9 +21,9 @@ namespace TopTrump_Klasasafn
         private int[] Agility { get; set; }
         private int[] Intrigue { get; set; }
         private int[] Stewardship { get; set; }
-        public GoT(string[] CardDeck) //Settur eiginleikana á réttan stað
+        public GoT() //Settur eiginleikana á réttan stað
         {
-            foreach (string cards in CardDeck)
+            foreach (string cards in CardStack)
             {
                 string[] card = cards.Split(':');
                 int i = 0;
@@ -43,7 +44,7 @@ namespace TopTrump_Klasasafn
         }
         public string[] InitCards()
         {
-            string[] CardStack = new string[52];
+            
             CardStack[0] = "Tyrion Lannister:1:26:heart:10:3:6:1:7:1:9:9";
             CardStack[1] = "Jamie Lannister:2:33:heart:7:8:7:6:10:8:3:4";
             CardStack[2] = "Cersei Lannister:3:33:heart:9:4:3:5:8:6:9:8";
