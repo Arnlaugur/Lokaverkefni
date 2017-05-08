@@ -109,41 +109,88 @@ namespace TopTrump_Klasasafn
            Console.WriteLine("Magic: " + Magic[cardNum]);
            Console.WriteLine("Height: " + Height[cardNum]);
        }
-       
-        public int Compete(int cardNum, int competitionCategory)
+
+       public int Compete(int cardNum, int cardNum2, int competitionCategory)
        {
            if (competitionCategory == 1)
            {
-               
+               if (Resistance[cardNum] > Resistance[cardNum2])
+               {
+                   return 1;
+               }
+               else if (Resistance[cardNum] < Resistance[cardNum2])
+               {
+                   return 2;
+               }
+               else
+               {
+                   return 3;
+               }
            }
            else if (competitionCategory == 2)
            {
-               
+               if (Resilience[cardNum] > Resilience[cardNum2])
+               {
+                   return 1;
+               }
+               else if (Resilience[cardNum] < Resilience[cardNum2])
+               {
+                   return 2;
+               }
+               else
+               {
+                   return 3;
+               }
            }
            else if (competitionCategory == 3)
            {
-               
+               if (Ferocity[cardNum] > Ferocity[cardNum2])
+               {
+                   return 1;
+               }
+               else if (Ferocity[cardNum] < Ferocity[cardNum2])
+               {
+                   return 2;
+               }
+               else
+               {
+                   return 3;
+               }
            }
            else if (competitionCategory == 4)
            {
-
+               if (Magic[cardNum] > Magic[cardNum2])
+               {
+                   return 1;
+               }
+               else if (Magic[cardNum] < Magic[cardNum2])
+               {
+                   return 2;
+               }
+               else
+               {
+                   return 3;
+               }
            }
            else if (competitionCategory == 5)
-	       {
-		 
-	       }
-           else if (competitionCategory == 6)
-	       {
-		 
-	       }
-           else if (competitionCategory == 7)
-	       {
-		 
-	       }
-           else if (competitionCategory == 8)
-	       {
-		 
-	       }           
+           {
+               if (Height[cardNum] > Height[cardNum2])
+               {
+                   return 1;
+               }
+               else if (Height[cardNum] < Height[cardNum2])
+               {
+                   return 2;
+               }
+               else
+               {
+                   return 3;
+               }
+           }
+           else
+           {
+               return 4;
+           }          
        }
     }
 }
