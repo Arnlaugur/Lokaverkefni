@@ -10,7 +10,6 @@ namespace Lokaverkefni_TopTrumps
     {
         static void Main(string[] args)
         {
-
         }
     }
 }

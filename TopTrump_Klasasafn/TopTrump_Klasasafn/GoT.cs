@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TopTrump_Klasasafn
 {
-    class GoT
+    class GoT:Class1
     {
         private string[] Name { get; set; }
         private string[] id { get; set; }
@@ -116,41 +116,132 @@ namespace TopTrump_Klasasafn
            Console.WriteLine("Stewardship: " + Stewardship[cardNum]);
        }
        
-        public int Compete(int cardNum, int competitionCategory)
+        public int Compete(int cardNum, int cardNum2 , int competitionCategory)
        {
-           if (competitionCategory == 1)
-           {
-               
+            if (competitionCategory == 1)
+            {
+                if (Wit[cardNum] > Wit[cardNum2])
+                {
+                    return 1;
+                }
+                else if (Wit[cardNum] < Wit[cardNum2])
+                {
+                    return 2;
+                }
+                else
+                {
+                    return 3;
+                }
            }
            else if (competitionCategory == 2)
            {
-               
-           }
+                if (Strength[cardNum] > Strength[cardNum2])
+                {
+                    return 1;
+                }
+                else if (Strength[cardNum] < Strength[cardNum2])
+                {
+                    return 2;
+                }
+                else
+                {
+                    return 3;
+                }
+            }
            else if (competitionCategory == 3)
            {
-               
-           }
+                if (Leadership[cardNum] > Leadership[cardNum2])
+                {
+                    return 1;
+                }
+                else if (Leadership[cardNum] < Leadership[cardNum2])
+                {
+                    return 2;
+                }
+                else
+                {
+                    return 3;
+                }
+            }
            else if (competitionCategory == 4)
            {
-
-           }
+                if (Piety[cardNum] > Piety[cardNum2])
+                {
+                    return 1;
+                }
+                else if (Piety[cardNum] < Piety[cardNum2])
+                {
+                    return 2;
+                }
+                else
+                {
+                    return 3;
+                }
+            }
            else if (competitionCategory == 5)
 	       {
-		 
-	       }
+                if (Prestige[cardNum] > Prestige[cardNum2])
+                {
+                    return 1;
+                }
+                else if (Prestige[cardNum] < Prestige[cardNum2])
+                {
+                    return 2;
+                }
+                else
+                {
+                    return 3;
+                }
+            }
            else if (competitionCategory == 6)
 	       {
-		 
-	       }
+                if (Agility[cardNum] > Agility[cardNum2])
+                {
+                    return 1;
+                }
+                else if (Agility[cardNum] < Agility[cardNum2])
+                {
+                    return 2;
+                }
+                else
+                {
+                    return 3;
+                }
+            }
            else if (competitionCategory == 7)
 	       {
-		 
-	       }
+                if (Intrigue[cardNum] > Intrigue[cardNum2])
+                {
+                    return 1;
+                }
+                else if (Intrigue[cardNum] < Intrigue[cardNum2])
+                {
+                    return 2;
+                }
+                else
+                {
+                    return 3;
+                }
+            }
            else if (competitionCategory == 8)
 	       {
-		 
-	       }
-           
+                if (Stewardship[cardNum] > Stewardship[cardNum2])
+                {
+                    return 1;
+                }
+                else if (Stewardship[cardNum] < Stewardship[cardNum2])
+                {
+                    return 2;
+                }
+                else
+                {
+                    return 3;
+                }
+            }
+            else
+            {
+                return 4;
+            }
        }
     }
 }
