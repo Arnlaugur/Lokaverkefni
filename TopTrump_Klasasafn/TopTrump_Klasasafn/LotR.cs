@@ -109,13 +109,8 @@ namespace TopTrump_Klasasafn
            Console.WriteLine("Magic: " + Magic[cardNum]);
            Console.WriteLine("Height: " + Height[cardNum]);
        }
-<<<<<<< HEAD
-       
-       /* public int Compete(int cardNum, int competitionCategory)
-=======
 
        public int Compete(int cardNum, int cardNum2, int competitionCategory)
->>>>>>> 3030f0f2472369dfa890f6ca5593b0905baee0a7
        {
            if (competitionCategory == 1)
            {
@@ -178,7 +173,6 @@ namespace TopTrump_Klasasafn
                }
            }
            else if (competitionCategory == 5)
-<<<<<<< HEAD
 	       {
 		 
 	       }
@@ -194,27 +188,11 @@ namespace TopTrump_Klasasafn
 	       {
 		 
 	       }           
-       } */
-=======
-           {
-               if (Height[cardNum] > Height[cardNum2])
-               {
-                   return 1;
-               }
-               else if (Height[cardNum] < Height[cardNum2])
-               {
-                   return 2;
-               }
-               else
-               {
-                   return 3;
-               }
-           }
            else
            {
                return 4;
            }          
        }
->>>>>>> 3030f0f2472369dfa890f6ca5593b0905baee0a7
+
     }
 }
