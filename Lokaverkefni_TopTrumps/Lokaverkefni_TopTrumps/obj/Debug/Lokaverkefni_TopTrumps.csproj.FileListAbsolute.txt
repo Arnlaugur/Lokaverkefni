@@ -1,1 +1,8 @@
 C:\Users\Notandi\Desktop\Lokaverkefni_FOR\Lokaverkefni_TopTrumps\Lokaverkefni_TopTrumps\bin\Debug\Lokaverkefni_TopTrumps.exe.config
+C:\Users\Notandi\Desktop\Lokaverkefni_FOR\Lokaverkefni_TopTrumps\Lokaverkefni_TopTrumps\bin\Debug\Lokaverkefni_TopTrumps.exe
+C:\Users\Notandi\Desktop\Lokaverkefni_FOR\Lokaverkefni_TopTrumps\Lokaverkefni_TopTrumps\bin\Debug\Lokaverkefni_TopTrumps.pdb
+C:\Users\Notandi\Desktop\Lokaverkefni_FOR\Lokaverkefni_TopTrumps\Lokaverkefni_TopTrumps\bin\Debug\TopTrump_Klasasafn.dll
+C:\Users\Notandi\Desktop\Lokaverkefni_FOR\Lokaverkefni_TopTrumps\Lokaverkefni_TopTrumps\bin\Debug\TopTrump_Klasasafn.pdb
+C:\Users\Notandi\Desktop\Lokaverkefni_FOR\Lokaverkefni_TopTrumps\Lokaverkefni_TopTrumps\obj\Debug\Lokaverkefni_TopTrumps.csprojResolveAssemblyReference.cache
+C:\Users\Notandi\Desktop\Lokaverkefni_FOR\Lokaverkefni_TopTrumps\Lokaverkefni_TopTrumps\obj\Debug\Lokaverkefni_TopTrumps.exe
+C:\Users\Notandi\Desktop\Lokaverkefni_FOR\Lokaverkefni_TopTrumps\Lokaverkefni_TopTrumps\obj\Debug\Lokaverkefni_TopTrumps.pdb
