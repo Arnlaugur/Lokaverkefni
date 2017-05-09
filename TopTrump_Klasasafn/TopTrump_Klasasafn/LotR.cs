@@ -207,20 +207,19 @@ namespace TopTrump_Klasasafn
            }
            else if (competitionCategory == 5)
 	       {
-		        
-	       }
-           else if (competitionCategory == 6)
-	       {
-		 
-	       }
-           else if (competitionCategory == 7)
-	       {
-		 
-	       }
-           else if (competitionCategory == 8)
-	       {
-		 
-	       }           
+               if (Height > Height2)
+               {
+                   return 1;
+               }
+               else if (Height < Height2)
+               {
+                   return 2;
+               }
+               else
+               {
+                   return 3;
+               }
+	       }          
            else
            {
                return 4;
