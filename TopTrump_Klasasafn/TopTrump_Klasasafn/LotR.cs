@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TopTrump_Klasasafn
 {
-    public class LotR
+    public class LotR:Class1
     {
         private string[] Name { get; set; }
         private string[] Culture { get; set; }
@@ -110,7 +110,7 @@ namespace TopTrump_Klasasafn
            Console.WriteLine("Height: " + Height[cardNum]);
        }
 
-       public int Compete(int cardNum, int cardNum2, int competitionCategory)
+     /*  public int Compete(int cardNum, int cardNum2, int competitionCategory)
        {
            if (competitionCategory == 1)
            {
@@ -192,7 +192,7 @@ namespace TopTrump_Klasasafn
            {
                return 4;
            }          
-       }
+       } */
 
     }
 }

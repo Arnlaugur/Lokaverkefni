@@ -6,43 +6,69 @@ using System.Threading.Tasks;
 
 namespace TopTrump_Klasasafn
 {
-    class GoT:Class1
+    public class GoT : Class1
     {
-        string[] CardStack = new string[52];
-        private string[] Name { get; set; }
-        private string[] id { get; set; }
-        private string[] Age { get; set; }
-        private string[] CardType { get; set; }
-        private int[] Wit { get; set; }
-        private int[] Strength { get; set; }
-        private int[] Leadership { get; set; }
-        private int[] Piety { get; set; }
-        private int[] Prestige { get; set; }
-        private int[] Agility { get; set; }
-        private int[] Intrigue { get; set; }
-        private int[] Stewardship { get; set; }
-        public GoT() //Settur eiginleikana á réttan stað
+        private string[] CardStack = new string[52];
+        private string Name { get; set; }
+        private string id { get; set; }
+        private string Age { get; set; }
+        private string CardType { get; set; }
+        private int Wit { get; set; }
+        private int Strength { get; set; }
+        private int Leadership { get; set; }
+        private int Piety { get; set; }
+        private int Prestige { get; set; }
+        private int Agility { get; set; }
+        private int Intrigue { get; set; }
+        private int Stewardship { get; set; }
+
+        private string Name2 { get; set; }
+        private string id2 { get; set; }
+        private string Age2 { get; set; }
+        private string CardType2 { get; set; }
+        private int Wit2 { get; set; }
+        private int Strength2 { get; set; }
+        private int Leadership2 { get; set; }
+        private int Piety2 { get; set; }
+        private int Prestige2 { get; set; }
+        private int Agility2 { get; set; }
+        private int Intrigue2 { get; set; }
+        private int Stewardship2 { get; set; }
+
+        public GoT(int Card1, int Card2) //Settur eiginleikana á réttan stað
         {
-            foreach (string cards in CardStack)
-            {
-                string[] card = cards.Split(':');
-                int i = 0;
-                Name[i] = card[1];
-                id[i] = card[2];
-                Age[i] = card[3];
-                CardType[i] = card[4];
-                Wit[i] = Convert.ToInt32(card[5]);
-                Strength[i] = Convert.ToInt32(card[6]);
-                Leadership[i] = Convert.ToInt32(card[7]);
-                Piety[i] = Convert.ToInt32(card[8]);
-                Prestige[i] = Convert.ToInt32(card[9]);
-                Agility[i] = Convert.ToInt32(card[10]);
-                Intrigue[i] = Convert.ToInt32(card[11]);
-                Stewardship[i] = Convert.ToInt32(card[12]);
-                i++;
-            }
+                
+                InitCards();
+                string[] card = CardStack[Card1].Split(':');
+                Name = card[0];
+                id = card[1];
+                Age = card[2];
+                CardType = card[3];
+                Wit = Convert.ToInt32(card[4]);
+                Strength = Convert.ToInt32(card[5]);
+                Leadership = Convert.ToInt32(card[6]);
+                Piety = Convert.ToInt32(card[7]);
+                Prestige = Convert.ToInt32(card[8]);
+                Agility = Convert.ToInt32(card[9]);
+                Intrigue = Convert.ToInt32(card[10]);
+                Stewardship = Convert.ToInt32(card[11]);
+
+                card = CardStack[Card2].Split(':');
+                Name2 = card[0];
+                id2 = card[1];
+                Age2 = card[2];
+                CardType2 = card[3];
+                Wit2 = Convert.ToInt32(card[4]);
+                Strength2 = Convert.ToInt32(card[5]);
+                Leadership2 = Convert.ToInt32(card[6]);
+                Piety2 = Convert.ToInt32(card[7]);
+                Prestige2 = Convert.ToInt32(card[8]);
+                Agility2 = Convert.ToInt32(card[9]);
+                Intrigue2 = Convert.ToInt32(card[10]);
+                Stewardship2 = Convert.ToInt32(card[11]);
+            
         }
-        public string[] InitCards()
+        public void InitCards()
         {
             
             CardStack[0] = "Tyrion Lannister:1:26:heart:10:3:6:1:7:1:9:9";
@@ -100,32 +126,46 @@ namespace TopTrump_Klasasafn
             CardStack[49] = "Bowen Marsh:50:30:Clubs:5:6:8:1:8:10:9:5";
             CardStack[50] = "Varamyr Sixskins:51:40:Clubs:7:3:7:1:7:3:8:2";
             CardStack[51] = "Eddison Tollett:52:20:Clubs:5:6:8:9:6:5:7:9";
-            return CardStack;
         }
        public void DisplayCard(int cardNum)
        {
-           Console.WriteLine("Name: " + Name[cardNum]);
-           Console.WriteLine("Age: " + Age[cardNum]);
-           Console.WriteLine("CardType: " + CardType[cardNum]);
-           Console.WriteLine("Wit: " + Wit[cardNum]);
-           Console.WriteLine("Strength: " + Strength[cardNum]);
-           Console.WriteLine("Leadership: " + Leadership[cardNum]);
-           Console.WriteLine("Piety: " + Piety[cardNum]);
-           Console.WriteLine("Prestige: " + Prestige[cardNum]);
-           Console.WriteLine("Agility: " + Agility[cardNum]);
-           Console.WriteLine("Intrigue: " + Intrigue[cardNum]);
-           Console.WriteLine("Stewardship: " + Stewardship[cardNum]);
+           Console.WriteLine("Name: " + Name);
+           Console.WriteLine("Age: " + Age);
+           Console.WriteLine("CardType: " + CardType);
+           Console.WriteLine("Wit: " + Wit);
+           Console.WriteLine("Strength: " + Strength);
+           Console.WriteLine("Leadership: " + Leadership);
+           Console.WriteLine("Piety: " + Piety);
+           Console.WriteLine("Prestige: " + Prestige);
+           Console.WriteLine("Agility: " + Agility);
+           Console.WriteLine("Intrigue: " + Intrigue);
+           Console.WriteLine("Stewardship: " + Stewardship);
        }
-       
+
+        public void DisplayCard2(int cardNum)
+        {
+            Console.WriteLine("Name: " + Name2);
+            Console.WriteLine("Age: " + Age2);
+            Console.WriteLine("CardType: " + CardType2);
+            Console.WriteLine("Wit: " + Wit2);
+            Console.WriteLine("Strength: " + Strength2);
+            Console.WriteLine("Leadership: " + Leadership2);
+            Console.WriteLine("Piety: " + Piety2);
+            Console.WriteLine("Prestige: " + Prestige2);
+            Console.WriteLine("Agility: " + Agility2);
+            Console.WriteLine("Intrigue: " + Intrigue2);
+            Console.WriteLine("Stewardship: " + Stewardship2);
+        }
+
         public int Compete(int cardNum, int cardNum2 , int competitionCategory)
        {
             if (competitionCategory == 1)
             {
-                if (Wit[cardNum] > Wit[cardNum2])
+                if (Wit > Wit2)
                 {
                     return 1;
                 }
-                else if (Wit[cardNum] < Wit[cardNum2])
+                else if (Wit < Wit2)
                 {
                     return 2;
                 }
@@ -136,11 +176,11 @@ namespace TopTrump_Klasasafn
            }
            else if (competitionCategory == 2)
            {
-                if (Strength[cardNum] > Strength[cardNum2])
+                if (Strength > Strength2)
                 {
                     return 1;
                 }
-                else if (Strength[cardNum] < Strength[cardNum2])
+                else if (Strength < Strength2)
                 {
                     return 2;
                 }
@@ -151,11 +191,11 @@ namespace TopTrump_Klasasafn
             }
            else if (competitionCategory == 3)
            {
-                if (Leadership[cardNum] > Leadership[cardNum2])
+                if (Leadership > Leadership2)
                 {
                     return 1;
                 }
-                else if (Leadership[cardNum] < Leadership[cardNum2])
+                else if (Leadership < Leadership2)
                 {
                     return 2;
                 }
@@ -166,11 +206,11 @@ namespace TopTrump_Klasasafn
             }
            else if (competitionCategory == 4)
            {
-                if (Piety[cardNum] > Piety[cardNum2])
+                if (Piety > Piety2)
                 {
                     return 1;
                 }
-                else if (Piety[cardNum] < Piety[cardNum2])
+                else if (Piety < Piety2)
                 {
                     return 2;
                 }
@@ -181,11 +221,11 @@ namespace TopTrump_Klasasafn
             }
            else if (competitionCategory == 5)
 	       {
-                if (Prestige[cardNum] > Prestige[cardNum2])
+                if (Prestige > Prestige2)
                 {
                     return 1;
                 }
-                else if (Prestige[cardNum] < Prestige[cardNum2])
+                else if (Prestige < Prestige2)
                 {
                     return 2;
                 }
@@ -196,11 +236,11 @@ namespace TopTrump_Klasasafn
             }
            else if (competitionCategory == 6)
 	       {
-                if (Agility[cardNum] > Agility[cardNum2])
+                if (Agility > Agility2)
                 {
                     return 1;
                 }
-                else if (Agility[cardNum] < Agility[cardNum2])
+                else if (Agility < Agility2)
                 {
                     return 2;
                 }
@@ -211,11 +251,11 @@ namespace TopTrump_Klasasafn
             }
            else if (competitionCategory == 7)
 	       {
-                if (Intrigue[cardNum] > Intrigue[cardNum2])
+                if (Intrigue > Intrigue2)
                 {
                     return 1;
                 }
-                else if (Intrigue[cardNum] < Intrigue[cardNum2])
+                else if (Intrigue < Intrigue2)
                 {
                     return 2;
                 }
@@ -226,11 +266,11 @@ namespace TopTrump_Klasasafn
             }
            else if (competitionCategory == 8)
 	       {
-                if (Stewardship[cardNum] > Stewardship[cardNum2])
+                if (Stewardship > Stewardship2)
                 {
                     return 1;
                 }
-                else if (Stewardship[cardNum] < Stewardship[cardNum2])
+                else if (Stewardship < Stewardship2)
                 {
                     return 2;
                 }
@@ -238,7 +278,7 @@ namespace TopTrump_Klasasafn
                 {
                     return 3;
                 }
-            }
+           }
             else
             {
                 return 4;

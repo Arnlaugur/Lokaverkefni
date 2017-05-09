@@ -42,7 +42,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="TopTrump_Klasasafn">
+    <Reference Include="TopTrump_Klasasafn, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\TopTrump_Klasasafn\TopTrump_Klasasafn\bin\Debug\TopTrump_Klasasafn.dll</HintPath>
     </Reference>
   </ItemGroup>
