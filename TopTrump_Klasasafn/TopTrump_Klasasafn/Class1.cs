@@ -3,31 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//Arnlaugur og Bjarki 18.4.2017
 namespace TopTrump_Klasasafn
 {
     public class Class1
     {
-
-
-
-        public string Reglur()
+        public string Reglur() //Aðferð til að sýna reglur
         {
             return "Í toptrumps er kortum skipt jafnt á milli leikmana og meiga þeir bara skoða efsta spilið sitt leikurinn byrjar á því að einn leikmaður velur grein til að keppa í og vinnur ef hann hefur hærri tölu í þeirri grein og tekur kortin sem voru notuð í þeirri umferð og draga spilarar efsta kort aftur og næsti leikmaður velur grein.";
         }
 
-        public int TakaLeik(int CardNum, int CardNum1, int CompetitionCategory)
+        public int[] SkyptaKortum() //Aðferð til að skipta kortum
         {
-            GoT got = new GoT();
-            return got.Compete(CardNum, CardNum1, CompetitionCategory);
-        }
-
-        public int[] SkyptaKortum()
-        {
+            Random Rand = new Random();
             int[] kort = new int[52];
-            for (int i = 0; i < 52; i++)
+            for (int i = 0; i < 51; i++)
             {
-                Random Rand = new Random();
                 kort[i] = Rand.Next(0, 51);
             }
             return kort;

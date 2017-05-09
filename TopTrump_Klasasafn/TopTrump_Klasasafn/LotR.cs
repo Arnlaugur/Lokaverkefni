@@ -3,43 +3,64 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//Arnlaugur og Bjarki 18.4.2017
 namespace TopTrump_Klasasafn
 {
-    public class LotR
+    public class LotR:Class1
     {
-        private string[] Name { get; set; }
-        private string[] Culture { get; set; }
-        private string[] id { get; set; }
-        private string[] CardType { get; set; }
-        private string[] Age { get; set; }       
-        private int[] Resistance { get; set; }
-        private int[] Resilience { get; set; }
-        private int[] Ferocity { get; set; }
-        private int[] Magic { get; set; }
-        private int[] Height { get; set; }
-        public LotR(string[] CardDeck) //Settur eiginleikana á réttan stað
+        private string[] CardStack = new string[52]; //Þetta system er lélegt og öruglega bettra að nota array eða lista en fengum það ekki til að virka rétt
+        private string Name { get; set; }
+        private string Culture { get; set; }
+        private string id { get; set; }
+        private string CardType { get; set; }
+        private string Age { get; set; }       
+        private int Resistance { get; set; }
+        private int Resilience { get; set; }
+        private int Ferocity { get; set; }
+        private int Magic { get; set; }
+        private string Height { get; set; }
+
+        private string Name2 { get; set; }
+        private string Culture2 { get; set; }
+        private string id2 { get; set; }
+        private string CardType2 { get; set; }
+        private string Age2 { get; set; }
+        private int Resistance2 { get; set; }
+        private int Resilience2 { get; set; }
+        private int Ferocity2 { get; set; }
+        private int Magic2 { get; set; }
+        private string Height2 { get; set; }
+
+        public LotR(int Card1, int Card2) //Settur eiginleikana á réttan stað
         {
-            foreach (string cards in CardDeck)
-            {
-                string[] card = cards.Split(':');
-                int i = 0;
-                Name[i] = card[1];
-                Culture[i] = card[2];
-                id[i] = card[3];
-                CardType[i] = card[4];
-                Age[i] = card[5];
-                Resistance[i] = Convert.ToInt32(card[6]);
-                Resilience[i] = Convert.ToInt32(card[7]);
-                Ferocity[i] = Convert.ToInt32(card[8]);
-                Magic[i] = Convert.ToInt32(card[9]);
-                Height[i] = Convert.ToInt32(card[10]);
-                i++;
-            }
+                InitCards();
+                string[] card = CardStack[Card1].Split(':');
+                Name = card[0];
+                Culture = card[1];
+                id = card[2];
+                CardType = card[3];
+                Age = card[4];
+                Resistance = Convert.ToInt32(card[5]);
+                Resilience = Convert.ToInt32(card[6]);
+                Ferocity = Convert.ToInt32(card[7]);
+                Magic = Convert.ToInt32(card[8]);
+                Height = card[9];
+
+                card = CardStack[Card2].Split(':');
+                Name2 = card[0];
+                Culture2 = card[1];
+                id2 = card[2];
+                CardType2 = card[3];
+                Age2 = card[4];
+                Resistance2 = Convert.ToInt32(card[5]);
+                Resilience2 = Convert.ToInt32(card[6]);
+                Ferocity2 = Convert.ToInt32(card[7]);
+                Magic2 = Convert.ToInt32(card[8]);
+                Height2 = card[9];
+            
         }
-        public string[] InitCards()
+        public void InitCards()  //Upplýsingar um kort
         {
-            string[] CardStack = new string[52];
             CardStack[0] = "Gimli:Dwarf:1:Heart:139:2:7:53:1:5'0";
             CardStack[1] = "Legolas:Elf:2:Heart:7000:2:8:42:14:5'10";
             CardStack[2] = "Aragorn:Human:3:Heart:87:2:7:59:10:6'4";
@@ -95,35 +116,42 @@ namespace TopTrump_Klasasafn
             CardStack[49] = "Sharku:Orc:50:Clubs:2710:1:2:50:1:5'3";
             CardStack[50] = "Dunlending Wildmen:Human:51:Clubs:35:1:5:42:0:5'7";
             CardStack[51] = "Dwarves:Dwarf:52:Clubs:180:2:7:48:2:4'8";
-            return CardStack;
         }
-       public void DisplayCard(int cardNum)
-       {
-           Console.WriteLine("Name: " + Name[cardNum]);
-           Console.WriteLine("Culture: " + Culture[cardNum]);
-           Console.WriteLine("CardType: " + CardType[cardNum]);
-           Console.WriteLine("Age: " + Age[cardNum]);          
-           Console.WriteLine("Resistance to Ring: " + Resistance[cardNum]);
-           Console.WriteLine("Resilience: " + Resilience[cardNum]);
-           Console.WriteLine("Ferocity: " + Ferocity[cardNum]);
-           Console.WriteLine("Magic: " + Magic[cardNum]);
-           Console.WriteLine("Height: " + Height[cardNum]);
+       public void DisplayCard(int cardNum) //Gefur upplýisingar um kort notanda
+        {
+           Console.WriteLine("Name: " + Name);
+           Console.WriteLine("Culture: " + Culture);
+           Console.WriteLine("CardType: " + CardType);
+           Console.WriteLine("Age: " + Age);          
+           Console.WriteLine("Resistance to Ring: " + Resistance);
+           Console.WriteLine("Resilience: " + Resilience);
+           Console.WriteLine("Ferocity: " + Ferocity);
+           Console.WriteLine("Magic: " + Magic);
+           Console.WriteLine("Height: " + Height);
        }
-<<<<<<< HEAD
-       
-       /* public int Compete(int cardNum, int competitionCategory)
-=======
 
-       public int Compete(int cardNum, int cardNum2, int competitionCategory)
->>>>>>> 3030f0f2472369dfa890f6ca5593b0905baee0a7
-       {
+       public void DisplayCard2(int cardNum) //Gefur upplýisingar um kort tölvu
+        {
+           Console.WriteLine("Name: " + Name2);
+           Console.WriteLine("Culture: " + Culture2);
+           Console.WriteLine("CardType: " + CardType2);
+           Console.WriteLine("Age: " + Age2);
+           Console.WriteLine("Resistance to Ring: " + Resistance2);
+           Console.WriteLine("Resilience: " + Resilience2);
+           Console.WriteLine("Ferocity: " + Ferocity2);
+           Console.WriteLine("Magic: " + Magic2);
+           Console.WriteLine("Height: " + Height2);
+       }
+
+       public int Compete(int cardNum, int cardNum2, int competitionCategory)  //Aðferð til að spila
+        {
            if (competitionCategory == 1)
            {
-               if (Resistance[cardNum] > Resistance[cardNum2])
+               if (Resistance > Resistance2)
                {
                    return 1;
                }
-               else if (Resistance[cardNum] < Resistance[cardNum2])
+               else if (Resistance < Resistance2)
                {
                    return 2;
                }
@@ -134,11 +162,11 @@ namespace TopTrump_Klasasafn
            }
            else if (competitionCategory == 2)
            {
-               if (Resilience[cardNum] > Resilience[cardNum2])
+               if (Resilience > Resilience2)
                {
                    return 1;
                }
-               else if (Resilience[cardNum] < Resilience[cardNum2])
+               else if (Resilience < Resilience2)
                {
                    return 2;
                }
@@ -149,11 +177,11 @@ namespace TopTrump_Klasasafn
            }
            else if (competitionCategory == 3)
            {
-               if (Ferocity[cardNum] > Ferocity[cardNum2])
+               if (Ferocity > Ferocity2)
                {
                    return 1;
                }
-               else if (Ferocity[cardNum] < Ferocity[cardNum2])
+               else if (Ferocity < Ferocity2)
                {
                    return 2;
                }
@@ -164,11 +192,11 @@ namespace TopTrump_Klasasafn
            }
            else if (competitionCategory == 4)
            {
-               if (Magic[cardNum] > Magic[cardNum2])
+               if (Magic > Magic2)
                {
                    return 1;
                }
-               else if (Magic[cardNum] < Magic[cardNum2])
+               else if (Magic < Magic2)
                {
                    return 2;
                }
@@ -176,45 +204,12 @@ namespace TopTrump_Klasasafn
                {
                    return 3;
                }
-           }
-           else if (competitionCategory == 5)
-<<<<<<< HEAD
-	       {
-		 
-	       }
-           else if (competitionCategory == 6)
-	       {
-		 
-	       }
-           else if (competitionCategory == 7)
-	       {
-		 
-	       }
-           else if (competitionCategory == 8)
-	       {
-		 
-	       }           
-       } */
-=======
-           {
-               if (Height[cardNum] > Height[cardNum2])
-               {
-                   return 1;
-               }
-               else if (Height[cardNum] < Height[cardNum2])
-               {
-                   return 2;
-               }
-               else
-               {
-                   return 3;
-               }
-           }
+           }      
            else
            {
                return 4;
            }          
-       }
->>>>>>> 3030f0f2472369dfa890f6ca5593b0905baee0a7
+       } 
+
     }
 }
