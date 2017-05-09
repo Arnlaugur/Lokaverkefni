@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//Arnlaugur og Bjarki 18.4.2017
 namespace TopTrump_Klasasafn
 {
     public class LotR:Class1
     {
-        private string[] CardStack = new string[52];
+        private string[] CardStack = new string[52]; //Þetta system er lélegt og öruglega bettra að nota array eða lista en fengum það ekki til að virka rétt
         private string Name { get; set; }
         private string Culture { get; set; }
         private string id { get; set; }
@@ -18,7 +18,7 @@ namespace TopTrump_Klasasafn
         private int Resilience { get; set; }
         private int Ferocity { get; set; }
         private int Magic { get; set; }
-        private int Height { get; set; }
+        private string Height { get; set; }
 
         private string Name2 { get; set; }
         private string Culture2 { get; set; }
@@ -29,7 +29,7 @@ namespace TopTrump_Klasasafn
         private int Resilience2 { get; set; }
         private int Ferocity2 { get; set; }
         private int Magic2 { get; set; }
-        private int Height2 { get; set; }
+        private string Height2 { get; set; }
 
         public LotR(int Card1, int Card2) //Settur eiginleikana á réttan stað
         {
@@ -44,7 +44,7 @@ namespace TopTrump_Klasasafn
                 Resilience = Convert.ToInt32(card[6]);
                 Ferocity = Convert.ToInt32(card[7]);
                 Magic = Convert.ToInt32(card[8]);
-                Height = Convert.ToInt32(card[9]);
+                Height = card[9];
 
                 card = CardStack[Card2].Split(':');
                 Name2 = card[0];
@@ -56,10 +56,10 @@ namespace TopTrump_Klasasafn
                 Resilience2 = Convert.ToInt32(card[6]);
                 Ferocity2 = Convert.ToInt32(card[7]);
                 Magic2 = Convert.ToInt32(card[8]);
-                Height2 = Convert.ToInt32(card[9]);
+                Height2 = card[9];
             
         }
-        public void InitCards()
+        public void InitCards()  //Upplýsingar um kort
         {
             CardStack[0] = "Gimli:Dwarf:1:Heart:139:2:7:53:1:5'0";
             CardStack[1] = "Legolas:Elf:2:Heart:7000:2:8:42:14:5'10";
@@ -117,8 +117,8 @@ namespace TopTrump_Klasasafn
             CardStack[50] = "Dunlending Wildmen:Human:51:Clubs:35:1:5:42:0:5'7";
             CardStack[51] = "Dwarves:Dwarf:52:Clubs:180:2:7:48:2:4'8";
         }
-       public void DisplayCard(int cardNum)
-       {
+       public void DisplayCard(int cardNum) //Gefur upplýisingar um kort notanda
+        {
            Console.WriteLine("Name: " + Name);
            Console.WriteLine("Culture: " + Culture);
            Console.WriteLine("CardType: " + CardType);
@@ -130,8 +130,8 @@ namespace TopTrump_Klasasafn
            Console.WriteLine("Height: " + Height);
        }
 
-       public void DisplayCard2(int cardNum)
-       {
+       public void DisplayCard2(int cardNum) //Gefur upplýisingar um kort tölvu
+        {
            Console.WriteLine("Name: " + Name2);
            Console.WriteLine("Culture: " + Culture2);
            Console.WriteLine("CardType: " + CardType2);
@@ -143,8 +143,8 @@ namespace TopTrump_Klasasafn
            Console.WriteLine("Height: " + Height2);
        }
 
-       public int Compete(int cardNum, int cardNum2, int competitionCategory)
-       {
+       public int Compete(int cardNum, int cardNum2, int competitionCategory)  //Aðferð til að spila
+        {
            if (competitionCategory == 1)
            {
                if (Resistance > Resistance2)
@@ -204,22 +204,7 @@ namespace TopTrump_Klasasafn
                {
                    return 3;
                }
-           }
-           else if (competitionCategory == 5)
-	       {
-               if (Height > Height2)
-               {
-                   return 1;
-               }
-               else if (Height < Height2)
-               {
-                   return 2;
-               }
-               else
-               {
-                   return 3;
-               }
-	       }          
+           }      
            else
            {
                return 4;

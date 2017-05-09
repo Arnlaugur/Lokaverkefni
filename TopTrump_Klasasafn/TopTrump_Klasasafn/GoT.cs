@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//Arnlaugur og Bjarki 18.4.2017
 namespace TopTrump_Klasasafn
 {
     public class GoT : Class1
     {
-        private string[] CardStack = new string[52];
+        private string[] CardStack = new string[52]; //Þetta system er lélegt og öruglega bettra að nota array eða lista en fengum það ekki til að virka rétt
         private string Name { get; set; }
         private string id { get; set; }
         private string Age { get; set; }
@@ -68,7 +68,7 @@ namespace TopTrump_Klasasafn
                 Stewardship2 = Convert.ToInt32(card[11]);
             
         }
-        public void InitCards()
+        public void InitCards() //Upplýsingar um kort
         {
             
             CardStack[0] = "Tyrion Lannister:1:26:heart:10:3:6:1:7:1:9:9";
@@ -127,7 +127,7 @@ namespace TopTrump_Klasasafn
             CardStack[50] = "Varamyr Sixskins:51:40:Clubs:7:3:7:1:7:3:8:2";
             CardStack[51] = "Eddison Tollett:52:20:Clubs:5:6:8:9:6:5:7:9";
         }
-       public void DisplayCard(int cardNum)
+       public void DisplayCard(int cardNum) //Gefur upplýisingar um kort notanda
        {
            Console.WriteLine("Name: " + Name);
            Console.WriteLine("Age: " + Age);
@@ -142,7 +142,7 @@ namespace TopTrump_Klasasafn
            Console.WriteLine("Stewardship: " + Stewardship);
        }
 
-        public void DisplayCard2(int cardNum)
+        public void DisplayCard2(int cardNum) //Gefur upplýisingar um kort tölvu
         {
             Console.WriteLine("Name: " + Name2);
             Console.WriteLine("Age: " + Age2);
@@ -157,7 +157,7 @@ namespace TopTrump_Klasasafn
             Console.WriteLine("Stewardship: " + Stewardship2);
         }
 
-        public int Compete(int cardNum, int cardNum2 , int competitionCategory)
+        public int Compete(int cardNum, int cardNum2 , int competitionCategory) //Aðferð til að spila
        {
             if (competitionCategory == 1)
             {
